@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-20T08:51:49.500Z",
+    "end": "2021-04-20T08:51:54.242Z",
+    "duration": 4742,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "927d58a1-a93b-428b-82ce-f2da54f2e44c",
+      "title": "",
+      "fullFile": "cypress/integration/Example/Enroll.js",
+      "file": "cypress/integration/Example/Enroll.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "54cbf2a1-7bac-4872-bcb8-24ddf3b0f699",
+          "title": "HTTP Example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST",
+              "fullTitle": "HTTP Example POST",
+              "timedOut": null,
+              "duration": 4417,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getLocalStorage(\"identity_token\").should(\"exist\");\ncy.getLocalStorage(\"identity_token\").then(token => {\n  var authHeader = 'JWT ' + token + '';\n  console.log(\"token\", token);\n  cy.request({\n    method: 'POST',\n    url: 'https://lms-development.shopdev.co/backend/core/member/',\n    body: {\n      \"suffix\": \"Mr.\",\n      \"first_name\": \"Ali\",\n      \"middle_name\": null,\n      \"last_name\": \"Ahmed\",\n      \"email\": \"zaminiazi67@test.com\",\n      \"phone\": \"00971-3204880\",\n      \"address2\": null,\n      \"country\": 12,\n      \"region\": null,\n      \"nationality\": null,\n      \"city\": null,\n      \"postal_code\": null,\n      \"DOB\": null,\n      \"gender\": null,\n      \"tier_id\": 177,\n      \"reason\": {\n        \"id\": 185,\n        \"code\": \"8751\",\n        \"reason\": \"Call center\",\n        \"action\": 18,\n        \"company_id\": 1,\n        \"created_at\": \"\",\n        \"updated_at\": \"\",\n        \"deleted_at\": \"\",\n        \"disabled_at\": \"\",\n        \"deleted_by\": 0,\n        \"code_description\": \"\"\n      },\n      \"enroll_eht_id\": 2624,\n      \"terms_and_condition\": true\n    },\n    headers: {\n      'content-type': 'application/json',\n      'Authorization': authHeader\n    }\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://lms-development.shopdev.co/backend/core/member/\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://lms-development.shopdev.co/backend/core/member/\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"content-type\": \"application/json\",\n  \"Authorization\": \"JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluQG9yZ2FuaXphdGlvbnJldGFpbi5jbyIsImV4cCI6MTYxODk5NTExMSwiZW1haWwiOiJhZG1pbkBvcmdhbml6YXRpb25yZXRhaW4uY28ifQ.ME2HP2UGhnB959oEmMQ3SlXvLoc9HlNmXu-7mL402Ck\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/7.1.0 Chrome/89.0.4389.90 Electron/12.0.2 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 495\n}\nBody: {\"suffix\":\"Mr.\",\"first_name\":\"Ali\",\"middle_name\":null,\"last_name\":\"Ahmed\",\"email\":\"zaminiazi67@test.com\",\"phone\":\"00971-3204880\",\"address2\":null,\"country\":12,\"region\":null,\"nationality\":null,\"city\":null,\"postal_code\":null,\"DOB\":null,\"gender\":null,\"tier_id\":177,\"reason\":{\"id\":185,\"code\":\"8751\",\"reason\":\"Call center\",\"action\":18,\"company_id\":1,\"created_at\":\"\",\"updated_at\":\"\",\"deleted_at\":\"\",\"disabled_at\":\"\",\"deleted_by\":0,\"code_description\":\"\"},\"enroll_eht_id\":2624,\"terms_and_condition\":true}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"date\": \"Tue, 20 Apr 2021 08:51:52 GMT\",\n  \"server\": \"istio-envoy\",\n  \"content-type\": \"application/json\",\n  \"vary\": \"Accept, Origin\",\n  \"allow\": \"GET, POST, HEAD, OPTIONS\",\n  \"content-length\": \"2169\",\n  \"x-frame-options\": \"DENY\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-envoy-upstream-service-time\": \"244\"\n}\nBody: {\n  \"Success\": false,\n  \"data\": {\n    \"ReturnCode\": 314,\n    \"SBInternalMemberId\": -1,\n    \"member\": {\n      \"first_name\": \"\",\n      \"middle_name\": \"\",\n      \"last_name\": \"\",\n      \"suffix\": \"\",\n      \"memberBirthdateMonth\": 0,\n      \"memberBirthdateDay\": 0,\n      \"memberBirthdateYear\": 0,\n      \"email\": \"\",\n      \"gender\": 0,\n      \"member_enroll_location\": \"\",\n      \"phone\": \"\",\n      \"deleted_at\": \"\",\n      \"root_entity_id\": 0,\n      \"company_id\": 0,\n      \"city\": \"\",\n      \"region\": 0,\n      \"nationality\": \"\",\n      \"country\": 0,\n      \"tier_id\": 0,\n      \"account_status\": 0,\n      \"is_merged\": false,\n      \"external_reference\": \"\",\n      \"external_language_reference\": \"\",\n      \"club_eht_id\": 0,\n      \"member_points\": 0,\n      \"id\": 0,\n      \"gender_string\": \"\",\n      \"created_at\": \"\",\n      \"deleted_by\": 0,\n      \"address\": \"\",\n      \"DOB\": \"\",\n      \"loyalty_number\": \"\",\n      \"member\": \"\",\n      \"account\": \"\",\n      \"ReturnCode\": 0,\n      \"disabled_at\": \"\",\n      \"postal_code\": \"\",\n      \"dont_email\": 0,\n      \"dont_mail\": 0,\n      \"dont_call\": 0,\n      \"dont_text\": 0,\n      \"address2\": \"\",\n      \"address3\": \"\",\n      \"is_employee\": 0,\n      \"password\": \"\",\n      \"custom_fields\": \"\",\n      \"account_string\": \"\",\n      \"clubData\": \"\",\n      \"enroll_date\": \"\",\n      \"country_string\": \"\",\n      \"region_string\": \"\",\n      \"full_name\": \"\",\n      \"user\": 0,\n      \"last_transaction_timestamp\": \"\",\n      \"account_status_string\": \"\",\n      \"member_tier_history\": [],\n      \"points\": [],\n      \"created_by\": 0,\n      \"non_offer_delivery_method\": 0,\n      \"offer_delivery_method_string\": \"\",\n      \"non_offer_delivery_method_string\": \"\",\n      \"merged_into\": 0,\n      \"inactive\": 0,\n      \"inactive_for_access\": 0,\n      \"offer_delivery_method\": \"None\",\n      \"email_otp\": 0,\n      \"email_verified\": 0,\n      \"is_gdpr_compliant\": false,\n      \"primary\": 0,\n      \"is_active\": false,\n      \"tier_expiry\": \"\",\n      \"club_external_reference\": \"\",\n      \"pending_amount_retro\": 0,\n      \"enroll_eht_id\": 0,\n      \"tier\": \"\",\n      \"bin_number\": \"\",\n      \"phone_code\": \"\",\n      \"profile_picture\": \"\",\n      \"previous_club\": 0,\n      \"current_club\": 0,\n      \"country_code\": \"\",\n      \"dont_send_notification\": 0,\n      \"cashier_or_admin_name\": \"\",\n      \"phone_with_format\": \"\",\n      \"second_tier\": 0,\n      \"is_second_tier\": false,\n      \"code\": \"\",\n      \"reason\": \"\",\n      \"email_sent\": false,\n      \"sms_sent\": false,\n      \"action\": 0,\n      \"reason_id\": 0,\n      \"account_id\": 0,\n      \"is_orgret_app_user\": false,\n      \"enroll_external_reference\": \"\",\n      \"country_abbreviation\": \"\",\n      \"region_abbreviation\": \"\",\n      \"terms_and_condition\": false,\n      \"countryItemInternalId\": 0,\n      \"regionItemInternalId\": 0\n    },\n    \"ExceptionString\": \"DUPLICATE_EMAIL\",\n    \"SavedAccountIdPostProcessed\": \"\",\n    \"Status\": \"\",\n    \"MemberId\": 0,\n    \"Success\": false,\n    \"memberlog_id\": 0,\n    \"record_id\": 0,\n    \"exception\": \"\",\n    \"memberEnrollLocationTitle\": \"\",\n    \"second_record_id\": 0,\n    \"account_id\": 0,\n    \"company_id\": 0\n  }\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://lms-development.shopdev.co/backend/core/member/\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://lms-development.shopdev.co/backend/core/member/\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"content-type\": \"application/json\",\n  \"Authorization\": \"JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluQG9yZ2FuaXphdGlvbnJldGFpbi5jbyIsImV4cCI6MTYxODk5NTExMSwiZW1haWwiOiJhZG1pbkBvcmdhbml6YXRpb25yZXRhaW4uY28ifQ.ME2HP2UGhnB959oEmMQ3SlXvLoc9HlNmXu-7mL402Ck\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/7.1.0 Chrome/89.0.4389.90 Electron/12.0.2 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 495\n}\nBody: {\"suffix\":\"Mr.\",\"first_name\":\"Ali\",\"middle_name\":null,\"last_name\":\"Ahmed\",\"email\":\"zaminiazi67@test.com\",\"phone\":\"00971-3204880\",\"address2\":null,\"country\":12,\"region\":null,\"nationality\":null,\"city\":null,\"postal_code\":null,\"DOB\":null,\"gender\":null,\"tier_id\":177,\"reason\":{\"id\":185,\"code\":\"8751\",\"reason\":\"Call center\",\"action\":18,\"company_id\":1,\"created_at\":\"\",\"updated_at\":\"\",\"deleted_at\":\"\",\"disabled_at\":\"\",\"deleted_by\":0,\"code_description\":\"\"},\"enroll_eht_id\":2624,\"terms_and_condition\":true}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"date\": \"Tue, 20 Apr 2021 08:51:52 GMT\",\n  \"server\": \"istio-envoy\",\n  \"content-type\": \"application/json\",\n  \"vary\": \"Accept, Origin\",\n  \"allow\": \"GET, POST, HEAD, OPTIONS\",\n  \"content-length\": \"2169\",\n  \"x-frame-options\": \"DENY\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-envoy-upstream-service-time\": \"244\"\n}\nBody: {\n  \"Success\": false,\n  \"data\": {\n    \"ReturnCode\": 314,\n    \"SBInternalMemberId\": -1,\n    \"member\": {\n      \"first_name\": \"\",\n      \"middle_name\": \"\",\n      \"last_name\": \"\",\n      \"suffix\": \"\",\n      \"memberBirthdateMonth\": 0,\n      \"memberBirthdateDay\": 0,\n      \"memberBirthdateYear\": 0,\n      \"email\": \"\",\n      \"gender\": 0,\n      \"member_enroll_location\": \"\",\n      \"phone\": \"\",\n      \"deleted_at\": \"\",\n      \"root_entity_id\": 0,\n      \"company_id\": 0,\n      \"city\": \"\",\n      \"region\": 0,\n      \"nationality\": \"\",\n      \"country\": 0,\n      \"tier_id\": 0,\n      \"account_status\": 0,\n      \"is_merged\": false,\n      \"external_reference\": \"\",\n      \"external_language_reference\": \"\",\n      \"club_eht_id\": 0,\n      \"member_points\": 0,\n      \"id\": 0,\n      \"gender_string\": \"\",\n      \"created_at\": \"\",\n      \"deleted_by\": 0,\n      \"address\": \"\",\n      \"DOB\": \"\",\n      \"loyalty_number\": \"\",\n      \"member\": \"\",\n      \"account\": \"\",\n      \"ReturnCode\": 0,\n      \"disabled_at\": \"\",\n      \"postal_code\": \"\",\n      \"dont_email\": 0,\n      \"dont_mail\": 0,\n      \"dont_call\": 0,\n      \"dont_text\": 0,\n      \"address2\": \"\",\n      \"address3\": \"\",\n      \"is_employee\": 0,\n      \"password\": \"\",\n      \"custom_fields\": \"\",\n      \"account_string\": \"\",\n      \"clubData\": \"\",\n      \"enroll_date\": \"\",\n      \"country_string\": \"\",\n      \"region_string\": \"\",\n      \"full_name\": \"\",\n      \"user\": 0,\n      \"last_transaction_timestamp\": \"\",\n      \"account_status_string\": \"\",\n      \"member_tier_history\": [],\n      \"points\": [],\n      \"created_by\": 0,\n      \"non_offer_delivery_method\": 0,\n      \"offer_delivery_method_string\": \"\",\n      \"non_offer_delivery_method_string\": \"\",\n      \"merged_into\": 0,\n      \"inactive\": 0,\n      \"inactive_for_access\": 0,\n      \"offer_delivery_method\": \"None\",\n      \"email_otp\": 0,\n      \"email_verified\": 0,\n      \"is_gdpr_compliant\": false,\n      \"primary\": 0,\n      \"is_active\": false,\n      \"tier_expiry\": \"\",\n      \"club_external_reference\": \"\",\n      \"pending_amount_retro\": 0,\n      \"enroll_eht_id\": 0,\n      \"tier\": \"\",\n      \"bin_number\": \"\",\n      \"phone_code\": \"\",\n      \"profile_picture\": \"\",\n      \"previous_club\": 0,\n      \"current_club\": 0,\n      \"country_code\": \"\",\n      \"dont_send_notification\": 0,\n      \"cashier_or_admin_name\": \"\",\n      \"phone_with_format\": \"\",\n      \"second_tier\": 0,\n      \"is_second_tier\": false,\n      \"code\": \"\",\n      \"reason\": \"\",\n      \"email_sent\": false,\n      \"sms_sent\": false,\n      \"action\": 0,\n      \"reason_id\": 0,\n      \"account_id\": 0,\n      \"is_orgret_app_user\": false,\n      \"enroll_external_reference\": \"\",\n      \"country_abbreviation\": \"\",\n      \"region_abbreviation\": \"\",\n      \"terms_and_condition\": false,\n      \"countryItemInternalId\": 0,\n      \"regionItemInternalId\": 0\n    },\n    \"ExceptionString\": \"DUPLICATE_EMAIL\",\n    \"SavedAccountIdPostProcessed\": \"\",\n    \"Status\": \"\",\n    \"MemberId\": 0,\n    \"Success\": false,\n    \"memberlog_id\": 0,\n    \"record_id\": 0,\n    \"exception\": \"\",\n    \"memberEnrollLocationTitle\": \"\",\n    \"second_record_id\": 0,\n    \"account_id\": 0,\n    \"company_id\": 0\n  }\n}\n\n\nhttps://on.cypress.io/request\n    at http://localhost:53634/__cypress/runner/cypress_runner.js:139395:21\n    at tryCatcher (http://localhost:53634/__cypress/runner/cypress_runner.js:10747:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53634/__cypress/runner/cypress_runner.js:8682:31)\n    at Promise._settlePromise (http://localhost:53634/__cypress/runner/cypress_runner.js:8739:18)\n    at Promise._settlePromise0 (http://localhost:53634/__cypress/runner/cypress_runner.js:8784:10)\n    at Promise._settlePromises (http://localhost:53634/__cypress/runner/cypress_runner.js:8864:18)\n    at _drainQueueStep (http://localhost:53634/__cypress/runner/cypress_runner.js:5454:12)\n    at _drainQueue (http://localhost:53634/__cypress/runner/cypress_runner.js:5447:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:53634/__cypress/runner/cypress_runner.js:5463:5)\n    at Async.drainQueues (http://localhost:53634/__cypress/runner/cypress_runner.js:5333:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:53634/__cypress/tests?p=cypress\\integration\\Example\\Enroll.js:112:10)",
+                "diff": null
+              },
+              "uuid": "cf1e77ae-246d-4142-adc6-9943b87b2645",
+              "parentUUID": "54cbf2a1-7bac-4872-bcb8-24ddf3b0f699",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "cf1e77ae-246d-4142-adc6-9943b87b2645"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4417,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "hmtl": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

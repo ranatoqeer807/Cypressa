@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-20T08:52:13.267Z",
+    "end": "2021-04-20T08:52:51.559Z",
+    "duration": 38292,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6ee6ce96-34a3-4cf2-b885-a7a132364d48",
+      "title": "",
+      "fullFile": "cypress/integration/Example/Lms_Club_Creation.js",
+      "file": "cypress/integration/Example/Lms_Club_Creation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "283403cf-b870-461a-8561-8933f719d44d",
+          "title": "LMS",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the Login",
+              "fullTitle": "LMS verify the Login",
+              "timedOut": null,
+              "duration": 33928,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Below form pageobjectModel\nconst obj = new _loginpage.default();\nobj.visit();\nobj.fillemail('admin@organizationretain.co');\nobj.fillpassword('admin');\nobj.submit();\ncy.title().should(\"eq\", 'Fabric'); // Below from fixture file\n// cy.visit('https://lms-development.shopdev.co/')\n// cy.title().should(\"eq\", 'Fabric')\n// cy.get('#username').type(this.data.email)\n// cy.get('#password').type(this.data.password)\n//  cy.wait(5000)\n// cy.get(\":nth-child(3) > .btn\").click()\n// Below from Custom command\ncy.login('admin@organizationretain.co', 'admin');\ncy.get(\".hierarchy\").click();\ncy.get(\".club\").click();\ncy.get(\".card-block > .btn\").click();\ncy.get(\"[placeholder='Title of the Club']\").type(\"autonewclub\");\ncy.get(\":nth-child(1) > :nth-child(2) > .form-group > .input-group > .form-control\").type(\"autonewclub_club\");\ncy.get(':nth-child(1) > .formarray-row > :nth-child(1) > .form-group > .input-group > .form-control').type(\"brightnesnewclub\");\ncy.get('.tier-form.ng-dirty > .formarray-row > :nth-child(2) > .form-group > .input-group > .form-control').type(\"NewClubbirghtness_tier\");\ncy.get('.tier-form.ng-dirty > .formarray-row > :nth-child(3) > .form-group > .input-group > .form-control').type(\"5555\");\ncy.get('.tier-form.ng-dirty > .formarray-row > :nth-child(5) > .form-group > .input-group > .col-5').type('1');\ncy.get('.tier-form.ng-dirty > .formarray-row > :nth-child(5) > .form-group > .input-group > .custom-dropdownlist > .ng-select-container > .ng-arrow-wrapper').click();\ncy.get('.ng-dropdown-panel-items').contains('Year').click();\ncy.get('.hierarchy-list-header > .form-check > .form-check-label > .col-12 > .row').click(); // cy.get('#Organization Retain Loyalty Program').check().should('be.checked')\n// cy.get('#Organization Retain Loyalty Program').check().should('be.checked')\ncy.get(\"#1\").click();\ncy.get('.modal-body > .row > :nth-child(1) > .btn > span').click();\ncy.get(\".form-check-input[type='checkbox']\").check().should('be.checked');\ncy.get('.btn > .ng-star-inserted').click(); //Edit club",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#username`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#username`, but never found it.\n    at Context.eval (https://lms-development.shopdev.co/__cypress/tests?p=cypress\\support\\index.js:131:6)",
+                "diff": null
+              },
+              "uuid": "f9e90d45-671b-4b0f-82b8-67dc64c37054",
+              "parentUUID": "283403cf-b870-461a-8561-8933f719d44d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f9e90d45-671b-4b0f-82b8-67dc64c37054"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33928,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "hmtl": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-20T08:52:03.997Z",
+    "end": "2021-04-20T08:52:04.587Z",
+    "duration": 590,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "83ee3a05-9701-4e82-b498-61b5c4cd3a9a",
+      "title": "",
+      "fullFile": "cypress/integration/Example/Hooks.js",
+      "file": "cypress/integration/Example/Hooks.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7233ac2-7ecc-426b-9934-ebfe43b3bec7",
+          "title": "MyTestSuit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Searching",
+              "fullTitle": "MyTestSuit Searching",
+              "timedOut": null,
+              "duration": 58,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"***************This is Searching Test******************\");",
+              "err": {},
+              "uuid": "3b0b9723-9a8f-4298-a273-5b58f7c0e6be",
+              "parentUUID": "d7233ac2-7ecc-426b-9934-ebfe43b3bec7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advance Searching",
+              "fullTitle": "MyTestSuit Advance Searching",
+              "timedOut": null,
+              "duration": 46,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"***************This is Advance Searching Test******************\");",
+              "err": {},
+              "uuid": "3b7b304f-a17e-4e77-a058-b1763f8dc205",
+              "parentUUID": "d7233ac2-7ecc-426b-9934-ebfe43b3bec7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Listing products",
+              "fullTitle": "MyTestSuit Listing products",
+              "timedOut": null,
+              "duration": 249,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"***************This is Listing products Test******************\");",
+              "err": {},
+              "uuid": "f67c32df-a364-41b9-9b01-40ed2b7159a2",
+              "parentUUID": "d7233ac2-7ecc-426b-9934-ebfe43b3bec7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3b0b9723-9a8f-4298-a273-5b58f7c0e6be",
+            "3b7b304f-a17e-4e77-a058-b1763f8dc205",
+            "f67c32df-a364-41b9-9b01-40ed2b7159a2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 353,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "hmtl": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+
+
+    "env": {
+        "url": "https://lms-development.shopdev.co/backend/core/auth/login/",
+        "email":"admin@organizationretain.co",
+        "password":"admin"
+        
+      },
+    
+    
+    "reporter": "mochawesome",
+    "reporterOptions":{
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "hmtl":true,
+        "json":true,
+        "charts":true
+    
+    },
+    
+      "video": false,
+      "projectId": "k34ubh"
+  
+    
+    }
+
+ 

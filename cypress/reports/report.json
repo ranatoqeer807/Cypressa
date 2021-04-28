@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-15T06:21:25.815Z",
+    "end": "2021-04-15T06:21:51.727Z",
+    "duration": 25912,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "410bdcc7-7e75-460c-b2a8-decbd40982db",
+      "title": "",
+      "fullFile": "cypress/integration/Example/custom.js",
+      "file": "cypress/integration/Example/custom.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4edce95-daa1-4fb4-b83c-6349e3bbe8e6",
+          "title": "MyTestSuit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the title of page Positive",
+              "fullTitle": "MyTestSuit verify the title of page Positive",
+              "timedOut": null,
+              "duration": 13443,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('admin@organizationretain.co', 'admin');",
+              "err": {},
+              "uuid": "ca40317b-d84a-4298-83e0-f46ce4a835f6",
+              "parentUUID": "e4edce95-daa1-4fb4-b83c-6349e3bbe8e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca40317b-d84a-4298-83e0-f46ce4a835f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13443,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "hmtl": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

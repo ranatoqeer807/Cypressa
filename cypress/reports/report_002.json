@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-15T06:30:48.038Z",
+    "end": "2021-04-15T06:30:48.603Z",
+    "duration": 565,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b25914df-4697-4c3e-899c-aab7d6771dbd",
+      "title": "",
+      "fullFile": "cypress/integration/sampletest/fixturesdemo.js",
+      "file": "cypress/integration/sampletest/fixturesdemo.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28c04350-fd8c-4ca2-8548-751a40b1a73b",
+          "title": "fixtures Demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Require",
+              "fullTitle": "fixtures Demo Require",
+              "timedOut": null,
+              "duration": 234,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(city.name).to.deep.equal('Lahore');",
+              "err": {},
+              "uuid": "492c57fd-73be-4982-97c6-e93848c74d14",
+              "parentUUID": "28c04350-fd8c-4ca2-8548-751a40b1a73b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "492c57fd-73be-4982-97c6-e93848c74d14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "hmtl": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
