@@ -19,7 +19,8 @@
         "charts":true
     
     },
-    
+
+      "testFiles": "**/*.feature",
       "video": false,
       "projectId": "k34ubh"
   
