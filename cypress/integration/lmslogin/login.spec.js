@@ -89,6 +89,12 @@ And ('I click on create button',()=>{
 
 })
  
+And ('I click on create button',()=>{
+
+    cy.get('.btn > .ng-star-inserted').click()
+
+})
+ 
 
         
        
